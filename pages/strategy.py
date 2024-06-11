@@ -24,3 +24,10 @@ with st.form("my_form", clear_on_submit=True, border=10):
         st.success("Strategy Created Successfully")
        else :
           st.error("Please fill the required fields")
+
+
+
+class StatergyView :
+
+   def __init__(self) -> None:
+      pass

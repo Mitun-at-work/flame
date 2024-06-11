@@ -1,22 +1,24 @@
 import streamlit as st
 
+
+from util.directory.directory_assets import DirectoryAssets
+
+dr = DirectoryAssets()
+
+checklist = dr.return_content_from_file(dr.dir)
+
+
 st.header('General Checklist')
 
 
-st.title('')
+
+with st.popover("Open popover"):
+    name = st.text_area("New Checklist", height=400)
+    if name :
+        checklist = name
+        dr.write_to_file(dr.dir, checklist)
 
 
-month = st.checkbox('Monthly Bias', key='mb')
-week = st.checkbox('Weekly Bias', key='wb')
-daily = st.checkbox('Daily Bias', key='db')
-dol = st.checkbox('Draw on Liquidity', key='robot')
-dealing_range = st.checkbox('Dealing Range', key='dr')
-high = st.checkbox('HTF High/Low Taken', key='htf')
-pd = st.checkbox('Mark PD Arrays', key='pd')
-cisd = st.checkbox('CISD in LTF', key='cisd')
-
-if month and week and daily and dol and dealing_range and high and cisd and pd:
-    st.success("Wait For an Entry")
-
-
+for elem in checklist.split('\n'):
+    st.checkbox(elem, key=elem)
 

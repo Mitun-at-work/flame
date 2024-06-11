@@ -5,7 +5,7 @@ col1, col2, col3 = st.columns(3)
 
 col1.button('Home', key='Home')
 col2.button('Analytics', key='Analytics')
-col3.button('Check List', key='Check List')
+col3.button('Check List', key='Check List') 
 
 
 st.write(' ')
@@ -13,13 +13,6 @@ st.header('ICT Silver Bullet')
 
 
 with st.form("my_form", clear_on_submit=True, border=10):
-
-
-    # Session
-    # Checklist
-    # Description
-    # Upload Image
-    # Result
 
 
     instrument = st.selectbox(
@@ -52,8 +45,9 @@ with st.form("my_form", clear_on_submit=True, border=10):
         ['A+','A', 'B']
     )
 
+    profit = st.text_input("Profit", key='profit')
 
-    col1, col2, col3, col4 = st.columns(4)
+
 
     description = st.text_area("Description", key='description')
 
