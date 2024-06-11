@@ -1,7 +1,4 @@
 from .__init__ import *
-import streamlit as st
-
-
 
 # This is a class that renders a view for a case study
 class CaseStudyView :
