@@ -1,7 +1,7 @@
-from __init__ import CaseStudyView
+import streamlit as st
 
 def main():
-    CaseStudyView()
+    st.title("Home")
 
 if __name__ == "__main__":
     main()

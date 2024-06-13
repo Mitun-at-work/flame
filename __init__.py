@@ -1,1 +1,0 @@
-from pages.case_study import CaseStudyView
