@@ -25,8 +25,6 @@ class Study:
             case_date = case_info[0]
             case_time = case_info[1]
         
-   
-        
         model = CaseStudyModel(
             title= case_title,
             notes= case_content,
